@@ -1,6 +1,6 @@
 const express = require('express');
 const helmet = require('helmet');
-const db = require('./data/db-config.js');
+const db = require('./data/db-config');
 // const ProjectRouter = require('./data/projects/project-router.js');
 // const TaskRouter = require('./data/tasks/task-router');
 // const ResourceRouter = require('./data/resources/resource-router');
