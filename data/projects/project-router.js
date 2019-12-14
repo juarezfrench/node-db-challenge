@@ -22,8 +22,6 @@ router.get('/', (req, res) => {
       .catch(err => {
         console.log(err);
         res.status(500).json({ message: 'Failed to get projects' });
-      });
-  });
   router.post('/', (req, res) => {
     const newProj = { ...req.body, completed: 0 };
     Projects.addProject(newProj)
@@ -35,42 +33,8 @@ router.get('/', (req, res) => {
         res.status(500).json({ message: 'Failed to create new project' });
       });
   });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  // router.post('/:id/addTask', (req, res) => {
-  //   Projects.getProjectById(req.params.id)
-  //     .then(project => {
-  //       if (project) {
-  //         const newTask = { ...req.body, completed: 0 };
-  //         Projects.addTask(newTask, req.params.id).then(task => {
-  //           res.status(201).json(task);
-  //         });
-  //       } else {
-  //         res
-  //           .status(404)
-  //           .json({ message: 'Could not find project with given ID' });
-  //       }
-  //     })
-  //     .catch(err => {
-  //       console.log(err);
-  //       res.status(500).json({ message: 'Failed to create new task' });
-  //     });
-  // });
-
-
-
-  module.exports = router;
+})
+})
+  module.exports = router
+ 
+    
